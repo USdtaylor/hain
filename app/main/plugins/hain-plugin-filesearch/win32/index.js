@@ -25,7 +25,7 @@ module.exports = (context) => {
   function fileMatcher(filePath, stats) {
     const ext = path.extname(filePath).toLowerCase();
     if (stats.isDirectory())
-      return true;
+      return false;
     if (searchExtensions.includes(ext))
       return true;
     return false;
